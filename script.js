@@ -1,6 +1,6 @@
 console.log("Hello World")
 const swag = document.getElementById("Rock")
-swag.addEventListener("click",waga)
+
 
 
 function getComputerChoice(){
@@ -27,5 +27,39 @@ function getRandomInt(){
 function userChoice(input){
     let btnValue = input.innerText;
     console.log(btnValue)
-    
+    let pcChoice = getComputerChoice()
+    console.log(pcChoice)
+
+    if (btnValue === "Scissors"){
+        if (pcChoice === "scissors"){
+            document.getElementById("res").innerHTML="Tie"
+        } else if (pcChoice === "paper"){
+            document.getElementById("res").innerHTML="Win"
+        }
+        else {
+            document.getElementById("res").innerHTML="Lose"
+        }
+    }
+    else if (btnValue === "Paper"){
+        if (pcChoice === "scissors"){
+            document.getElementById("res").innerHTML="Lose"
+        } else if (pcChoice === "paper"){
+            document.getElementById("res").innerHTML="Tie"
+        }
+        else {
+            document.getElementById("res").innerHTML="Win"
+        }
+    }
+    else {
+        if (pcChoice === "scissors"){
+            document.getElementById("res").innerHTML="Win"
+        } else if (pcChoice === "paper"){
+            document.getElementById("res").innerHTML="Lose"
+        }
+        else {
+            document.getElementById("res").innerHTML="Tie"
+        }
+    }
+
+
 }
